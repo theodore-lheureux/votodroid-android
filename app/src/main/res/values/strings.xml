@@ -1,7 +1,3 @@
 <resources>
-    <string name="app_name">VotoDroidLHeureux</string>
-    <string name="add_button">Ajouter</string>
-    <string name="add_question_prompt">Entrez une question.</string>
-    <string name="submit_question">Poser la question</string>
-    <string name="submit_vote">Vote</string>
+    <string name="app_name">votodroid</string>
 </resources>
