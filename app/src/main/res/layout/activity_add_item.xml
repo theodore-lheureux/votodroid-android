@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddItemActivity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_question_prompt"
+        android:layout_marginLeft="10pt"
+        android:layout_marginTop="10pt"
+        android:textSize="10pt"/>
+
+    <EditText
+        android:id="@+id/editTextTextQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="20pt"
+        android:hint="Question" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="30pt"
+        android:layout_margin="20pt"
+        android:text="@string/submit_question"/>
+
+</LinearLayout>
