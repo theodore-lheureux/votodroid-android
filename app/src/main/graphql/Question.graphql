@@ -1,0 +1,56 @@
+query GetPaginatedQuery(
+    $limit: Int!,
+    $cursor: String,
+) {
+    questions {
+        getPaginated(limit: $limit, cursor: $cursor) {
+            errors {
+                field
+                message
+            }
+            questions {
+                id
+                text
+                createdAt
+                updatedAt
+                userId
+            }
+        }
+    }
+}
+
+mutation CreateQuestionMutation($text: String!) {
+    questions {
+        create(text: $text) {
+            errors {
+                field
+                message
+            }
+            question {
+                id
+                text
+                createdAt
+                updatedAt
+                userId
+            }
+        }
+    }
+}
+
+query GetQuestionByIdQuery($questionId: String!) {
+    questions {
+        getById(questionId: $questionId) {
+            errors {
+                field
+                message
+            }
+            question {
+                id
+                text
+                createdAt
+                updatedAt
+                userId
+            }
+        }
+    }
+}

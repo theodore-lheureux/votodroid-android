@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40pt">
+        <EditText
+            android:id="@+id/editTextEmailAddress"
+            android:layout_marginRight="30pt"
+            android:layout_marginLeft="30pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10pt">
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_marginRight="30pt"
+            android:layout_marginLeft="30pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Username" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10pt">
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_marginRight="30pt"
+            android:layout_marginLeft="30pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1pt">
+        <TextView
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account ? Click here to login."
+            android:layout_marginLeft="32pt"
+            android:layout_weight="1"
+
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5pt">
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_marginRight="50pt"
+            android:layout_marginLeft="50pt"
+            android:layout_width="wrap_content"
+            android:layout_height="30pt"
+            android:layout_weight="1"
+            android:text="Register" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/registerProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

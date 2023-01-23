@@ -1,0 +1,67 @@
+query GetUserQuery {
+	users {
+		me {
+			user {
+				id
+				username
+				email
+			}
+			errors {
+				field
+				message
+			}
+		}
+	}
+}
+
+mutation LoginMutation (
+    $usernameOrEmail: String!,
+    $password: String!,
+) {
+    users {
+        login(
+            usernameOrEmail: $usernameOrEmail,
+            password: $password
+        ) {
+			user {
+				id
+				username
+				email
+			}
+			errors {
+				field
+				message
+			}
+        }
+    }
+}
+
+mutation LogoutMutation {
+    users {
+        logout
+    }
+}
+
+mutation RegisterUserMutation (
+    $username: String!,
+    $email: String!,
+    $password: String!,
+) {
+    users {
+        register(newUser: {
+            username: $username,
+            email: $email,
+            password: $password
+        }) {
+           	user {
+				id
+				username
+				email
+			}
+			errors {
+				field
+				message
+			}
+        }
+    }
+}

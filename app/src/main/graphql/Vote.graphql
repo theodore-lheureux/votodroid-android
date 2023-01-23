@@ -1,0 +1,32 @@
+query GetStatsForQuestionQuery($questionId: String!) {
+	votes {
+		getStatsForQuestion(questionId: $questionId)
+	}
+}
+
+query GetAvgForQuestionQuery($questionId: String!) {
+    votes {
+        getAvgForQuestion(questionId: $questionId)
+    }
+}
+
+mutation CreateVoteMutation(
+    $questionId: String!,
+    $value: Int!
+) {
+    votes {
+        create(questionId: $questionId, value: $value) {
+            errors {
+                field
+                message
+            }
+            vote {
+                id
+                value
+                createdAt
+                updatedAt
+                value
+            }
+        }
+    }
+}
